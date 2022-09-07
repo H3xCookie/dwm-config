@@ -61,12 +61,15 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = {"firefox", NULL};
 static const char *flameshotcmd[] = {"flameshot", "gui"};
 
+#include "shiftview.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },	
-	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = flameshotcmd } },	
+	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
+        { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = flameshotcmd } },	
+	{ MODKEY,                       XK_bracketright, shiftview,{.i = +1 } },
+	{ MODKEY,                       XK_bracketleft,  shiftview,{.i = -1 } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },

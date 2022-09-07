@@ -1,5 +1,8 @@
 # REQUIREMENTS
-## flameshot - Screenshot utility
+#### flameshot - Screenshot utility
+
+# PATCHES
+#### shiftview.c - Jump to next/previous tag
 
 # KEYBINDS
 Super - Windows Key
@@ -10,3 +13,4 @@ Super - Windows Key
 | Super + Space | Spawn dmenu |
 | Super + F | Spawn firefox |
 | Super + Shift + s | Spawn flameshot gui |
+| Super ] / [ | Move to next/previous tag |
