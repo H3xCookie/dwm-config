@@ -1,9 +1,8 @@
-* KEYBINDS
+# KEYBINDS
 Super - Windows Key
 
-|Bind                   |Action            |
-|----------------------+------------------|
-|Super + T             |Spawn st          |
-|Super + Space         |Spawn dmenu       |
-|Super + F             |Spawn firefox     |
-
+| Bind          | Action        |
+| ------------- | ------------- |
+| Super + T     | Spawn st      |
+| Super + Space | Spawn dmenu   |
+| Super + F     | Spawn firefox |
