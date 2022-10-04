@@ -6,17 +6,26 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
-static const int user_bh            = 2;        /* 2 is the default spacing around the bar's font */
+static const int user_bh            = 10;        /* 2 is the default spacing around the bar's font */
 static const char dmenufont[]       = "monospace:size=10";
+
+/* default colors */
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+
+/* custom colors */
+static const char col_black[]       = "#000000";
+static const char col_red1[]        = "#FF2424";
+static const char col_green1[]      = "#55FF33";
+static const char col_green2[]      = "#2A9020";
+
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray1, col_green2, col_gray2 },
+	[SchemeSel]  = { col_black, col_green1,  col_green1  },
 };
 
 /* tagging */
@@ -57,7 +66,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_green2, "-nf", col_gray1, "-sb", col_green1, "-sf", col_black, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = {"firefox", NULL};
 static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
