@@ -10,11 +10,20 @@ static const int user_bh            = 10;        /* 2 is the default spacing aro
 static const char dmenufont[]       = "Hack-Regular-Nerd-Font-Complete:size=10";
 
 /* default colors */
+/*
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
+*/
+
+static const char col_gray1[]       = "#282a36";
+static const char col_gray2[]       = "#ffb86c";
+static const char col_gray3[]       = "#ff79c6";
+static const char col_gray4[]       = "#ffb86c";
+static const char col_cyan[]        = "#282a36";
+
 
 /* custom colors */
 static const char col_black[]       = "#000000";
@@ -22,11 +31,20 @@ static const char col_red1[]        = "#FF2424";
 static const char col_green1[]      = "#55FF33";
 static const char col_green2[]      = "#2A9020";
 
-static const char *colors[][3]      = {
+
+//static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray1, col_green2, col_gray2 },
-	[SchemeSel]  = { col_black, col_green1,  col_green1  },
+//	[SchemeNorm] = { col_gray1, col_green2, col_gray2 },
+//	[SchemeSel]  = { col_black, col_green1,  col_green1  },
+//};
+
+static const char *colors[][3]      = {
+    /*               fg         bg         border   */
+    [SchemeNorm] = { col_gray3, col_gray1, col_cyan },
+    [SchemeSel]  = { col_gray4, col_cyan,  col_gray2  },
 };
+
+
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -66,7 +84,7 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_green2, "-nf", col_gray1, "-sb", col_green1, "-sf", col_black, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = {"firefox", NULL};
 static const char *flameshotcmd[] = {"flameshot", "gui"};
