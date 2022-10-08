@@ -5,9 +5,9 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
+static const char *fonts[]          = { "Hack-Regular-Nerd-Font-Complete:size=10" };
 static const int user_bh            = 10;        /* 2 is the default spacing around the bar's font */
-static const char dmenufont[]       = "monospace:size=10";
+static const char dmenufont[]       = "Hack-Regular-Nerd-Font-Complete:size=10";
 
 /* default colors */
 static const char col_gray1[]       = "#222222";
@@ -69,7 +69,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_green2, "-nf", col_gray1, "-sb", col_green1, "-sf", col_black, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *firefoxcmd[] = {"firefox", NULL};
-static const char *flameshotcmd[] = {"flameshot", "gui", NULL};
+static const char *flameshotcmd[] = {"flameshot", "gui"};
 
 #include "shiftview.c"
 static const Key keys[] = {
@@ -77,7 +77,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_t,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_f,      spawn,          {.v = firefoxcmd } },
-        { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = flameshotcmd } },	
+    { MODKEY|ShiftMask,             XK_s,      spawn,          {.v = flameshotcmd } },	
 	{ MODKEY,                       XK_bracketright, shiftview,{.i = +1 } },
 	{ MODKEY,                       XK_bracketleft,  shiftview,{.i = -1 } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
